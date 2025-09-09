@@ -30,6 +30,20 @@
             return $this->languages;
         }
     }
+
+    $people2 = [
+        new Person("Deniss","denissmail@mail.mail",["Java","C#","php","JS"]),
+        new Person("Timurs","timursmail@mail.mail",["Java","php","python","C++"]),
+        new Person("Markuss","markussmail@mail.mail",["Java","php","C#"])
+    ];
+    function printObjects($array){
+        for($a = 0; $a < count($array); $a++){
+            echo "name: " . $array[$a].getName() . "<br>";
+            echo "email: " . $array[$a].getEmail() . "<br>";
+            echo "languages: " . $array[$a].getLanguages() . "<br>";
+            echo "<br><br>";
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -75,20 +89,23 @@
                 }
                 echo "]<br>";
             }
+            function printArray($array){
+                for($a = 0; $a < count($array); $a++){
+                    foreach ($array[$a] as $key => $value) {
+                        if($key != "languages"){
+                            echo $key . ": " . $value . "<br>";
+                        }else{
+                            echo $key . ": " . arrayToString($value) . "<br>";
+                        }
+                    }
+                    lineBreak(2);
+                }
+            }
         ?>
 
         <h2>People array</h2>
         <?php
-            for($a = 0; $a < count($people); $a++){
-                foreach ($people[$a] as $key => $value) {
-                    if($key != "languages"){
-                        echo $key . ": " . $value . "<br>";
-                    }else{
-                        echo $key . ": " . arrayToString($value) . "<br>";
-                    }
-                }
-                lineBreak(2);
-            }
+            printObjects($people2);
         ?>
     </body>
 </html>
