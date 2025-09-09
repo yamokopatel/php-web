@@ -1,3 +1,37 @@
+<?php
+    class Person{
+        private $name;
+        private $email;
+        private $languages;
+
+        public function __construct($name, $email, $languages){
+            $this->name = $name;
+            $this->email = $email;
+            $this->languages = $languages;
+        }
+
+        public function setName($newName){
+            $this->name = $newName;
+        }
+        public function setEmail($newEmail){
+            $this->email = $newEmail;
+        }
+        public function setLanguages($newLanguages){
+            $this->languages = $newLanguages;
+        }
+
+        public function getName(){
+            return $this->name;
+        }
+        public function getEmail(){
+            return $this->email;
+        }
+        public function getLanguages(){
+            return $this->languages;
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
