@@ -16,7 +16,7 @@
             Accusamus praesentium vel libero!
         </p>
         <br><br>
-        <form action="hello.php" method="POST">
+        <form action="form-submitted.php" method="POST">
             <label for="name">Name</label>
             <input type="text" name="name">
             <br>
