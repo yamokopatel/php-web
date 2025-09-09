@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>php web</title>
+    </head>
+    <body>
+        <h2>
+            Header
+        </h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Odio, officia dolorem maxime soluta placeat mollitia vel, laudantium deserunt, accusantium fuga harum ex? 
+            Quasi iusto commodi eaque nulla, explicabo quas soluta voluptate, 
+            debitis velit officia facere aperiam consequuntur obcaecati quae, laborum laudantium vero reiciendis alias sit accusantium. 
+            Accusamus praesentium vel libero!
+        </p>
+        <br><br>
+        <form action="hello.php" method="POST">
+            <label for="name">Name</label>
+            <input type="text" name="name">
+            <br>
+            <!---->
+            <label for="email">Email</label>
+            <input type="text" name="email">
+            <br>
+            <!---->
+            <label for="feedback">Feedback</label>
+            <input type="text" name="feedback">
+            <br>
+            <!---->
+            <input type="submit">
+        </form>
+    </body>
+</html>
