@@ -38,9 +38,9 @@
     ];
     function printObjects($array){
         for($a = 0; $a < count($array); $a++){
-            echo "name: " . $array[$a].getName() . "<br>";
-            echo "email: " . $array[$a].getEmail() . "<br>";
-            echo "languages: " . $array[$a].getLanguages() . "<br>";
+            echo "name: " . $array[$a]->getName() . "<br>";
+            echo "email: " . $array[$a]->getEmail() . "<br>";
+            echo "languages: " . arrayToString($array[$a]->getLanguages()) . "<br>";
             echo "<br><br>";
         }
     }
@@ -78,16 +78,28 @@
                 }
             }
 
+            // function arrayToString($array){
+            //     echo "[";
+            //     for($a = 0; $a < count($array); $a++){
+            //         if(($a + 1) < count($array)){
+            //             echo $array[$a] . ", ";
+            //         }else{
+            //             echo $array[$a];
+            //         }
+            //     }
+            //     echo "]<br>";
+            // }
             function arrayToString($array){
-                echo "[";
+                $string = "[";
                 for($a = 0; $a < count($array); $a++){
                     if(($a + 1) < count($array)){
-                        echo $array[$a] . ", ";
+                        $string .= $array[$a] . ", ";
                     }else{
-                        echo $array[$a];
+                        $string .= $array[$a];
                     }
                 }
-                echo "]<br>";
+                $string .= "]<br>";
+                return $string;
             }
             function printArray($array){
                 for($a = 0; $a < count($array); $a++){
